@@ -70,21 +70,27 @@ namespace CashRegister
                 //round to whole (you shouldn't buy half of a cat)     
                 numberCat = Math.Round(numberCat, 0, MidpointRounding.AwayFromZero);
                 numberRock = Math.Round(numberRock, 0, MidpointRounding.AwayFromZero);
-                numberJelly = Math.Round(numberJelly, 0, MidpointRounding.AwayFromZero);                
+                numberJelly = Math.Round(numberJelly, 0, MidpointRounding.AwayFromZero);
 
                 //deal with negatives
-                if (numberCat < 0)
                 {
-                    numberCat = numberCat * -1;
-                }
-                if (numberRock < 0)
-                {
-                    numberRock = numberRock * -1;
-                }
-                if (numberJelly < 0)
-                {
-                    numberJelly = numberJelly * -1;
-                }
+                    //if (numberCat < 0)
+                    //{
+                    //    numberCat = numberCat * -1;
+                    //}
+                    //if (numberRock < 0)
+                    //{
+                    //    numberRock = numberRock * -1;
+                    //}
+                    //if (numberJelly < 0)
+                    //{
+                    //    numberJelly = numberJelly * -1;
+                    //}
+                } //<--my old solution to this problem
+                    //using math (much simpler)
+                numberCat = Math.Abs(numberCat);
+                numberRock = Math.Abs(numberRock);
+                numberJelly = Math.Abs(numberJelly);
 
                 //display any corrections
                 feralCatInput.Text = Convert.ToString(numberCat);
@@ -153,10 +159,7 @@ namespace CashRegister
                 amountTendered = Math.Round(amountTendered, 2, MidpointRounding.AwayFromZero);
 
                 //deal with negatives
-                if (amountTendered <= 0)
-                {
-                    amountTendered = amountTendered * -1;
-                }
+                amountTendered = Math.Abs(amountTendered);
 
                 //display any corrections
                 tenderedInput.Text = Convert.ToString(amountTendered);
