@@ -83,5 +83,26 @@
   <ItemGroup>
     <None Include="Resources\Emporium.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meowthatworks.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agreement.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
